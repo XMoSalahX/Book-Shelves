@@ -36,19 +36,21 @@ function Books({ dest, reloadNow, bo }) {
         </div>
       </div>
       <div className="book-title">{bo.title}</div>
-      {bo.authors.map((author, index) => (
-        <div key={index} className="book-authors">
-          {author}
-        </div>
-      ))}
+      {bo.authors !== undefined
+        ? bo.authors.map((author, index) => (
+            <div key={index} className="book-authors">
+              {author}
+            </div>
+          ))
+        : null}
     </div>
   );
 }
 
 // Add prop types to Book componant
 Books.propTypes = {
-  dest: PropTypes.bool.isRequired,
-  reloadNow: PropTypes.func.isRequired,
+  dest: PropTypes.bool,
+  reloadNow: PropTypes.func,
   bo: PropTypes.object.isRequired,
 };
 

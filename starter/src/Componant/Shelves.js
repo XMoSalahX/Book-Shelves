@@ -9,14 +9,16 @@ function Shelves({ name, data, reloadNow }) {
         <h2 className="bookshelf-title">{name}</h2>
         <div className="bookshelf-books">
           <ol className="books-grid">
-            {data.map((book) => (
-              <Books
-                key={book.id}
-                dest={true}
-                reloadNow={reloadNow}
-                bo={book}
-              />
-            ))}
+            {data.map((book) =>
+              book !== undefined ? (
+                <Books
+                  key={book.id}
+                  dest={true}
+                  reloadNow={reloadNow}
+                  bo={book}
+                />
+              ) : null
+            )}
           </ol>
         </div>
       </div>

@@ -5,9 +5,11 @@ import Books from "../Books";
 
 const SearchPage = function () {
   const [data, setData] = useState([]);
+
   async function handeler(e) {
     if (e.target.value !== undefined && e.target.value !== "") {
-      const res = await search(e.target.value, 20);
+      const res = await search(e.target.value);
+      // console.log(res);
       if (res !== undefined) {
         setData(res);
       }
@@ -32,10 +34,13 @@ const SearchPage = function () {
       </div>
       <div className="search-books-results">
         <ol className="books-grid">
-          {!data.error ? (
-            data.map((book) => <Books key={book.id} {...book} />)
-          ) : (
+          {data.error === "empty query" ? (
             <div>Your Book not found</div>
+          ) : (
+            // data.map((book) => console.log(book))
+            data.map((book) =>
+              book.title ? <Books key={book.id} bo={book} /> : false
+            )
           )}
         </ol>
       </div>
