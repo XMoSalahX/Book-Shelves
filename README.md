@@ -14,21 +14,12 @@ To get started developing right away:
 ## What You're Getting
 
 ````bash
-├── CONTRIBUTING.md
 ├── README.md - This file.
-├── SEARCH_TERMS.md # The whitelisted short collection of available search terms for you to use with your app.
 ├── package.json # npm package manager file. It's unlikely that you'll need to modify this.
 ├── public
-│   ├── favicon.ico # React Icon, You may change if you wish.
-│   └── index.html # DO NOT MODIFY
+│   ├── favicon.ico # React Icon
+│   └── index.html
 └── src
-    ├── Componant
-    │   ├── page
-    │   │   ├── home.js # home componant page have 3 shelves
-    │   │   └── SearchPage.js # Search page Companant to find any book exist in our database
-    │   ├── Books.js # Book componant to handel any book in our app
-    │   ├── Search.js # Search Componant to handel Search route
-    │   └── Shelves.js # Shelves Componant to handel every shelf in our app
     ├── App.css # Styles for your app. Feel free to customize this as you desire.
     ├── App.js # This is the root of your app. Contains static HTML right now.
     ├── App.test.js # Used for testing. Provided with Create React App. Testing is encouraged, but not required.
