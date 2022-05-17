@@ -8,10 +8,14 @@ const SearchPage = function () {
   const [query, setQuery] = useState("");
 
   async function handeler(e) {
-    if (e.target.value !== undefined && e.target.value !== "") {
-      const res = await search(e.target.value);
-      setData(res);
-      setQuery(e.target.value);
+    if (e.target.value === "") {
+      return setData([]);
+    } else {
+      if (e.target.value !== undefined && e.target.value !== "") {
+        const res = await search(e.target.value);
+        setData(res);
+        setQuery(e.target.value);
+      }
     }
   }
 
