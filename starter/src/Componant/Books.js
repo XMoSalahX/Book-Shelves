@@ -1,9 +1,21 @@
 import { update } from "../BooksAPI";
-import PropTypes from "prop-types";
+import PropTypes, { func } from "prop-types";
 
 // Componant to build books
 function Books({ dest, reloadNow, bo }) {
-  console.log(bo);
+  // Get our book from session storage
+  const books = JSON.parse(window.sessionStorage.getItem("books"));
+
+  // Function to found shelf for our book and return none if not found
+  function foundShelf(id) {
+    const dataAfterFilter = books.filter((book) => id === book.id);
+    if (dataAfterFilter.length !== 0) {
+      return dataAfterFilter[0].shelf;
+    } else {
+      return "none";
+    }
+  }
+
   return (
     <div className="book">
       <div className="book-top">
@@ -19,7 +31,7 @@ function Books({ dest, reloadNow, bo }) {
         ></div>
         <div className="book-shelf-changer">
           <select
-            defaultValue={bo.shelf || "none"}
+            defaultValue={bo.shelf || foundShelf(bo.id)}
             onChange={async (e) => {
               await update(bo, e.target.value).then(() => {
                 if (dest) {

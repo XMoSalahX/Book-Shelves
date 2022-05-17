@@ -13,6 +13,12 @@ const Home = function () {
     if (currentlyReading.length === 0) {
       getBookObject();
     }
+
+    // Set books in session storage
+    window.sessionStorage.setItem(
+      "books",
+      JSON.stringify([...currentlyReading, ...wantToRead, ...read])
+    );
   });
 
   // Function to get book object
