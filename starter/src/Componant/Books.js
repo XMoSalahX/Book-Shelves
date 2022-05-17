@@ -12,12 +12,14 @@ function Books({ dest, reloadNow, bo }) {
           style={{
             width: 128,
             height: 193,
-            backgroundImage: `url(${bo.imageLinks.thumbnail})`,
+            backgroundImage: `url(${
+              bo?.imageLinks?.thumbnail || bo?.imageLinks?.smallThumbnail || ""
+            })`,
           }}
         ></div>
         <div className="book-shelf-changer">
           <select
-            defaultValue={bo.shelf ? bo.shelf : "none"}
+            defaultValue={bo.shelf || "none"}
             onChange={async (e) => {
               await update(bo, e.target.value).then(() => {
                 if (dest) {
