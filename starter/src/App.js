@@ -5,7 +5,6 @@ import SearchPage from "./Componant/pages/SearchPage";
 
 // Main Functions
 function App() {
-  console.log("Hello");
   return (
     // Routes to shift from componant to anthor
     <Routes>

@@ -9,7 +9,6 @@ const SearchPage = function () {
   async function handeler(e) {
     if (e.target.value !== undefined && e.target.value !== "") {
       const res = await search(e.target.value);
-      // console.log(res);
       if (res !== undefined) {
         setData(res);
       }
@@ -37,7 +36,6 @@ const SearchPage = function () {
           {data.error === "empty query" ? (
             <div>Your Book not found</div>
           ) : (
-            // data.map((book) => console.log(book))
             data.map((book) =>
               book.title ? <Books key={book.id} bo={book} /> : false
             )

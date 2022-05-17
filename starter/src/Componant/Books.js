@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 // Componant to build books
 function Books({ dest, reloadNow, bo }) {
+  console.log(bo);
   return (
     <div className="book">
       <div className="book-top">
@@ -16,7 +17,7 @@ function Books({ dest, reloadNow, bo }) {
         ></div>
         <div className="book-shelf-changer">
           <select
-            defaultValue="none"
+            defaultValue={bo.shelf ? bo.shelf : "none"}
             onChange={async (e) => {
               await update(bo, e.target.value).then(() => {
                 if (dest) {
@@ -25,9 +26,7 @@ function Books({ dest, reloadNow, bo }) {
               });
             }}
           >
-            <option value="none" disabled>
-              Move to...
-            </option>
+            <option disabled>Move to...</option>
             <option value="currentlyReading">Currently Reading</option>
             <option value="wantToRead">Want to Read</option>
             <option value="read">Read</option>
