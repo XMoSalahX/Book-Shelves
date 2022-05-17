@@ -1,5 +1,5 @@
 import { update } from "../BooksAPI";
-import PropTypes, { func } from "prop-types";
+import PropTypes from "prop-types";
 
 // Componant to build books
 function Books({ dest, reloadNow, bo }) {
