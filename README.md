@@ -33,7 +33,7 @@ An application that helps to search for books and arrange them in shelves to det
 │        │   ├── arrow-back.svg
 │        │   └── arrow-drop-down.svg
 │        ├── index.css # Global styles. You probably won't need to change anything here.
-│        └── index.js # You should not need to modify this file. It is used for DOM rendering only.
+│        └── index.js # react index file.
 └── README.md - This file.
 ```
 
