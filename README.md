@@ -11,7 +11,7 @@ An application that helps to search for books and arrange them in shelves to det
 
 ## What You're Getting
 
-````bash
+```bash
 ┌── starter
 │    ├── package.json # npm package manager file. It's unlikely that you'll need to modify this.
 │    ├── public
@@ -35,7 +35,7 @@ An application that helps to search for books and arrange them in shelves to det
 │        ├── index.css # Global styles. You probably won't need to change anything here.
 │        └── index.js # You should not need to modify this file. It is used for DOM rendering only.
 └── README.md - This file.
-``` ├
+```
 
 Remember that good React design practice is to create new JS files for each component and use import/require statements to include them where they are needed.
 
@@ -53,7 +53,7 @@ Method Signature:
 
 ```js
 getAll();
-````
+```
 
 - Returns a Promise which resolves to a JSON object containing a collection of book objects.
 - This collection represents the books currently in the bookshelves in your app.
