@@ -1,10 +1,8 @@
-# MyReads Project
+# Book Shelves
 
 An application that helps to search for books and arrange them in shelves to determine what is being read now, that we want to read, and that we have already read.
 
-## TL;DR
-
-To get started developing right away:
+## To get started developing right away:
 
 - Go to starter file `cd starter/`
 - install all project dependencies with `npm install`
@@ -14,7 +12,7 @@ To get started developing right away:
 ## What You're Getting
 
 ````bash
-├── starter
+┌── starter
 │    ├── package.json # npm package manager file. It's unlikely that you'll need to modify this.
 │    ├── public
 │    │   ├── favicon.ico # React Icon
@@ -36,7 +34,7 @@ To get started developing right away:
 │        │   └── arrow-drop-down.svg
 │        ├── index.css # Global styles. You probably won't need to change anything here.
 │        └── index.js # You should not need to modify this file. It is used for DOM rendering only.
-├── README.md - This file.
+└── README.md - This file.
 ``` ├
 
 Remember that good React design practice is to create new JS files for each component and use import/require statements to include them where they are needed.
